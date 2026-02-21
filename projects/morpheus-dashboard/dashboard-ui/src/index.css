@@ -1,0 +1,107 @@
+@import './styles/tokens.css';
+
+/* Additional global styles for the playground */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Selection styling */
+::selection {
+  background: var(--nyx-color-accent-primary);
+  color: var(--nyx-color-bg-primary);
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--nyx-color-bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--nyx-glass-border);
+  border-radius: var(--nyx-radius-full);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--nyx-glass-border-hover);
+}
+
+/* Focus visible styling */
+:focus-visible {
+  outline: 2px solid var(--nyx-color-accent-primary);
+  outline-offset: 2px;
+}
+
+/* Utility classes for playground */
+.component-section {
+  margin-bottom: var(--nyx-space-12);
+}
+
+.component-section h2 {
+  font-size: var(--nyx-font-size-2xl);
+  font-weight: var(--nyx-font-weight-semibold);
+  margin: 0 0 var(--nyx-space-6);
+  color: var(--nyx-color-accent-primary);
+}
+
+.component-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--nyx-space-6);
+}
+
+.demo-item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--nyx-space-3);
+}
+
+.demo-item label {
+  font-size: var(--nyx-font-size-sm);
+  color: var(--nyx-color-text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: var(--nyx-font-weight-medium);
+}
+
+.button-row {
+  display: flex;
+  gap: var(--nyx-space-3);
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.status-row {
+  display: flex;
+  gap: var(--nyx-space-4);
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.token-preview {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: var(--nyx-space-4);
+}
+
+.color-swatch {
+  display: flex;
+  flex-direction: column;
+  gap: var(--nyx-space-2);
+}
+
+.color-box {
+  height: 60px;
+  border-radius: var(--nyx-radius-md);
+  border: 1px solid var(--nyx-glass-border);
+}
+
+.color-label {
+  font-size: var(--nyx-font-size-xs);
+  color: var(--nyx-color-text-tertiary);
+  font-family: var(--nyx-font-family-mono);
+}

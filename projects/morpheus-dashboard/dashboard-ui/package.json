@@ -1,0 +1,52 @@
+{
+  "name": "@nyx/dashboard-ui",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Morpheus Glass Dashboard - Lit component library for Nyx Gateway",
+  "scripts": {
+    "dev": "vite",
+    "dev:playground": "vite --open playground.html",
+    "build": "tsc && vite build",
+    "build:lib": "tsc && vite build --mode lib",
+    "preview": "vite preview",
+    "lint": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@lit/context": "^1.1.6",
+    "@lit/reactive-element": "^2.1.2",
+    "lit": "^3.3.2",
+    "lucide": "^0.575.0"
+  },
+  "devDependencies": {
+    "@types/node": "^25.3.0",
+    "typescript": "~5.9.3",
+    "vite": "^7.3.1"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./components/*": {
+      "import": "./dist/components/*.js",
+      "types": "./dist/components/*.d.ts"
+    },
+    "./utils/*": {
+      "import": "./dist/utils/*.js",
+      "types": "./dist/utils/*.d.ts"
+    },
+    "./styles/*": "./dist/styles/*"
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "lit",
+    "web-components",
+    "dashboard",
+    "glassmorphism",
+    "gateway",
+    "nyx"
+  ]
+}
